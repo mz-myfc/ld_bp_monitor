@@ -95,7 +95,7 @@ class Load {
                                       margin: const EdgeInsets.only(top: 30),
                                       child: TextButton(
                                         onPressed: () async {
-                                          Load.h.dismiss();
+                                          dismiss();
                                           await Ble.helper.connect(device);
                                         },
                                         style: TextButton.styleFrom(
@@ -109,10 +109,6 @@ class Load {
                                     ),
                                   ],
                                 ),
-                                onTap: () async {
-                                  dismiss();
-                                  await helper.connect(device);
-                                },
                               );
                             },
                             separatorBuilder:
